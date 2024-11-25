@@ -1,13 +1,18 @@
+
 fn bigger(a: i32, b: i32) -> i32 {
     // TODO: Complete this function to return the bigger number!
     // If both numbers are equal, any of them can be returned.
     // Do not use:
     // - another function call
     // - additional variables
+    return if a > b { a } else { b };
 }
 
 fn main() {
     // You can optionally experiment here.
+
+    println!("The bigger number between 10 and 8 is {}", bigger(10, 8));
+
 }
 
 // Don't mind this for now :)
