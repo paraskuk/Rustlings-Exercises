@@ -32,6 +32,7 @@ mod tests {
         assert_eq!(icecreams, 5); // Don't change this line.
     }
 
+
     #[test]
     fn check_icecream() {
         assert_eq!(maybe_icecream(0), Some(5));
