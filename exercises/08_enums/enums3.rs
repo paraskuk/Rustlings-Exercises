@@ -44,6 +44,7 @@ impl State {
     }
 
     fn process(&mut self, message: Message) {
+        // variants using the methods defined above.
         match message {
             Message::Resize { width, height } => self.resize(width, height),
             Message::Move(point) => self.move_position(point),
@@ -62,20 +63,16 @@ fn main() {
 mod tests {
     use super::*;
 
-    fn create_initial_state() -> State {
-        State {
+    #[test]
+    fn test_match_message_call() {
+        let mut state = State {
             width: 0,
             height: 0,
             position: Point { x: 0, y: 0 },
             message: String::from("hello world"),
             color: (0, 0, 0),
             quit: false,
-        }
-    }
-
-    #[test]
-    fn test_match_message_call() {
-        let mut state = create_initial_state();
+        };
 
         state.process(Message::Resize {
             width: 10,
