@@ -5,8 +5,11 @@ enum DivisionError {
     // Only case for `i64`: `i64::MIN / -1` because the result is `i64::MAX + 1`
     IntegerOverflow,
     // Example: 5 / 2 = 2.5
+
     NotDivisible,
+
 }
+
 
 // TODO: Calculate `a` divided by `b` if `a` is evenly divisible by `b`.
 // Otherwise, return a suitable error.
